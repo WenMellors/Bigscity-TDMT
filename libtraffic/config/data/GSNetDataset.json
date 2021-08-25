@@ -1,0 +1,15 @@
+{
+  "batch_size": 32,
+  "cache_dataset": true,
+  "num_workers": 0,
+  "pad_with_last_sample": false,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+  "scaler": "minmax01",
+  "load_external": true,
+  "normal_external": true,
+  "ext_scaler": "minmax01",
+  "add_time_in_day": true,
+  "add_day_in_week": true
+}
+

@@ -1,0 +1,22 @@
+{
+  "num_of_gru_layers": 5,
+  "gru_hidden_size": 256,
+  "gcn_nums_filters": [64, 64],
+
+  "scaler": "minmax01",
+  "load_external": true,
+  "normal_external": true,
+  "ext_scaler": "minmax01",
+  "add_time_in_day": "true",
+  "add_day_in_week": "true",
+
+  "batch_size": 32,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+  "learning_rate": 0.00001,
+  "learner": "adam",
+  "max_epoch": 200,
+  "use_early_stop": true,
+  "patience": 10,
+  "delta": 1e-6
+}

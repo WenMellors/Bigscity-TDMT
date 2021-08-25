@@ -53,7 +53,11 @@ def get_model(config, data_feature):
                     return getattr(importlib.import_module('libtraffic.model.traffic_demand_prediction'),
                                    config['model'])(config, data_feature)
                 except AttributeError:
-                    raise AttributeError('model is not found')
+                    try:
+                        return getattr(importlib.import_module('libtraffic.model.traffic_accident_prediction'),
+                                       config['model'])(config, data_feature)
+                    except AttributeError:
+                        raise AttributeError('model is not found')
     elif config['task'] == 'map_matching':
         try:
             return getattr(importlib.import_module('libtraffic.model.map_matching'),
